@@ -18,3 +18,29 @@ Language runtime: python3
 Package manager: pip
 Test runner: pytest
 version control: GitHub
+
+## Current implementation
+
+The planner currently includes:
+
+- A `Task` domain model with a title and due date/time.
+- A `Planner` that validates objectives and returns them in chronological order.
+- A command-line interface for adding objectives and displaying the sorted planner.
+- Pytest coverage for chronological ordering, equal deadlines, and empty titles.
+
+## Run the planner
+
+Activate the virtual environment and run:
+
+```bash
+source .venv/bin/activate
+python app.py
+```
+
+Enter due dates using `YYYY-MM-DD HH:MM`. Enter `q` when you are finished adding objectives.
+
+## Run tests
+
+```bash
+python -m pytest
+```
