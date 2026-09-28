@@ -1,0 +1,15 @@
+classDiagram
+    class Planner {
+        -tasks: List~Task~
+        +add_task(title: str, due_at: datetime): Task
+        +tasks(): List~Task~
+    }
+
+    class Task {
+        +title: str
+        +due_at: datetime
+    }
+
+    Planner "1" --> "0..*" Task : holds in memory; returns ordered by due_at
+
+    note for Task "Title is trimmed and must not be empty.\nTasks with equal due_at retain addition order."

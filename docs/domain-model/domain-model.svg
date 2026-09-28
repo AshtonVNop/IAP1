@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img" aria-labelledby="title description">
+  <title id="title">College Planner Domain Model</title>
+  <desc id="description">A Planner holds zero or more Task objects in memory and returns them ordered by due date and time. A Task has a title and due date and time. Titles are trimmed and cannot be empty; equal deadlines preserve addition order.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569" />
+    </marker>
+    <style>
+      .canvas { fill: #f8fafc; }
+      .classbox { fill: #ffffff; stroke: #475569; stroke-width: 2; }
+      .header { fill: #e0f2fe; }
+      .class-name { font: 700 23px Georgia, serif; fill: #0f172a; }
+      .stereotype { font: italic 14px Georgia, serif; fill: #475569; }
+      .member { font: 17px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #1e293b; }
+      .rule { stroke: #94a3b8; stroke-width: 1.5; }
+      .relation { stroke: #475569; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .label { font: 15px Georgia, serif; fill: #334155; }
+      .note { fill: #fef3c7; stroke: #d97706; stroke-width: 1.5; }
+      .note-text { font: 16px Georgia, serif; fill: #422006; }
+    </style>
+  </defs>
+  <rect class="canvas" width="1000" height="430" />
+
+  <g aria-label="Planner class">
+    <rect class="classbox" x="55" y="72" width="425" height="250" rx="3" />
+    <path class="header" d="M58 75 H477 V131 H58 Z" />
+    <text class="stereotype" x="267.5" y="98" text-anchor="middle">domain service / collection</text>
+    <text class="class-name" x="267.5" y="122" text-anchor="middle">Planner</text>
+    <line class="rule" x1="55" y1="131" x2="480" y2="131" />
+    <text class="member" x="78" y="164">- tasks: List&lt;Task&gt;</text>
+    <line class="rule" x1="55" y1="184" x2="480" y2="184" />
+    <text class="member" x="78" y="218">+ add_task(title, due_at): Task</text>
+    <text class="member" x="78" y="253">+ tasks(): List&lt;Task&gt;</text>
+    <text class="label" x="78" y="294">Sorts the returned list by due_at</text>
+  </g>
+
+  <g aria-label="Task class">
+    <rect class="classbox" x="600" y="92" width="340" height="190" rx="3" />
+    <path class="header" d="M603 95 H937 V151 H603 Z" />
+    <text class="stereotype" x="770" y="118" text-anchor="middle">immutable value</text>
+    <text class="class-name" x="770" y="142" text-anchor="middle">Task</text>
+    <line class="rule" x1="600" y1="151" x2="940" y2="151" />
+    <text class="member" x="624" y="187">+ title: str</text>
+    <text class="member" x="624" y="222">+ due_at: datetime</text>
+  </g>
+
+  <path class="relation" d="M480 200 H600" />
+  <text class="label" x="492" y="177">1</text>
+  <text class="label" x="610" y="177">0..*</text>
+  <text class="label" x="540" y="226" text-anchor="middle">holds in memory</text>
+
+  <path class="note" d="M248 355 H752 L770 373 V408 H248 Z" />
+  <path d="M752 355 V373 H770" fill="none" stroke="#d97706" stroke-width="1.5" />
+  <text class="note-text" x="500" y="380" text-anchor="middle">Task title is trimmed and must not be empty.</text>
+  <text class="note-text" x="500" y="402" text-anchor="middle">Equal due_at values retain addition order.</text>
+</svg>
