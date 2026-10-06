@@ -38,3 +38,16 @@ The complete first response, including its diagram, is preserved unedited in [ai
 - Added [ADR-001](../adr/ADR-001-in-memory-planner-state.md), recording the existing choice to keep planner tasks in memory for the current single-session CLI scope.
 - Considered JSON-file and SQLite persistence as alternatives, and documented the cost of lost tasks at process exit and the work a later persistence requirement would introduce.
 - No application code or behavior was changed.
+
+## Walking skeleton and CI prompt and diff
+
+### Prompt used
+
+> Implement and verify one thin end-to-end slice of the existing college student planner without changing its in-memory storage decision. Add a real CLI integration test that submits tasks, exercises the planner, and verifies chronological output. Configure GitHub Actions to run the test suite and document this work in the prompt-and-diff log.
+
+### Diff summary
+
+- Added [test_app.py](../../test_app.py), which starts the actual CLI as a subprocess, submits two tasks in reverse deadline order, and verifies the displayed planner sorts them chronologically.
+- Added [ci.yml](../../.github/workflows/ci.yml), which installs pytest and runs the complete suite on pushes, pull requests, and manual dispatches.
+- Added [walking-skeleton.svg](../evidence/walking-skeleton.svg), a terminal-style rendering of the successful real CLI output; the environment has no capturable display for a desktop screenshot.
+- Kept the existing in-memory `Planner` collection as the storage layer, consistent with [ADR-001](../adr/ADR-001-in-memory-planner-state.md); no canned data or alternate persistence was introduced.

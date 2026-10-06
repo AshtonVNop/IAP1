@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560" role="img" aria-labelledby="title description">
+  <title id="title">College Student Planner walking skeleton run</title>
+  <desc id="description">Terminal-style rendering of the actual app.py process output after entering two tasks with reverse-ordered deadlines.</desc>
+  <rect width="1120" height="560" fill="#101820"/>
+  <rect x="24" y="24" width="1072" height="512" rx="8" fill="#17232d" stroke="#41515d"/>
+  <path d="M32 24h1056a8 8 0 0 1 8 8v40H24V32a8 8 0 0 1 8-8Z" fill="#273844"/>
+  <circle cx="49" cy="48" r="6" fill="#ef6a5b"/>
+  <circle cx="71" cy="48" r="6" fill="#e7b34b"/>
+  <circle cx="93" cy="48" r="6" fill="#63bb73"/>
+  <text x="560" y="53" text-anchor="middle" fill="#d1dce3" font-family="monospace" font-size="15">Walking skeleton | app.py</text>
+  <g fill="#dce7ed" font-family="monospace" font-size="16">
+    <text x="52" y="104" fill="#85d3b0">$</text><text x="72" y="104">printf task input | python app.py</text>
+    <text x="52" y="140">College Student Planner</text>
+    <text x="52" y="164">Add objectives and deadlines in chronological order.</text>
+    <text x="52" y="200">Objective (or 'q' to quit): Due date and time (%Y-%m-%d %H:%M):</text>
+    <text x="52" y="224" fill="#85d3b0">Objective added.</text>
+    <text x="52" y="260">Objective (or 'q' to quit): Due date and time (%Y-%m-%d %H:%M):</text>
+    <text x="52" y="284" fill="#85d3b0">Objective added.</text>
+    <text x="52" y="320">Objective (or 'q' to quit):</text>
+    <text x="52" y="368" fill="#f1c86a">Your planner:</text>
+    <text x="52" y="404">- 2026-09-12 15:00 | Submit essay</text>
+    <text x="52" y="428">- 2026-09-12 16:00 | Study for biology</text>
+  </g>
+  <text x="52" y="500" fill="#9fb1bc" font-family="monospace" font-size="12">Rendered from the successful local app.py run; tasks were entered in reverse deadline order.</text>
+</svg>
