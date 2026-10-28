@@ -1,0 +1,18 @@
+# BEFORE refactor — commit fbf7efb
+# Wed Oct 28 20:33:02 UTC 2026
+# Test file checksums:
+1771ebb4ea77a124881e4bbe0987d170829a2b9dc3910e8e9357f568ac03cf54  test_app.py
+1f8d1e111b2e8a8d250e1228d6eba939d996b4f8493da5d3f61b090a238c6a8d  test_planner.py
+$ python -m pytest -v -p no:cacheprovider
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- /usr/local/bin/python
+rootdir: /home/claude/src/IAP1-main
+plugins: platformdirs-4.13.0, anyio-4.15.1
+collecting ... collected 4 items
+
+test_app.py::test_cli_adds_and_displays_tasks_in_deadline_order PASSED   [ 25%]
+test_planner.py::test_tasks_are_returned_in_chronological_order PASSED   [ 50%]
+test_planner.py::test_tasks_with_equal_deadlines_keep_addition_order PASSED [ 75%]
+test_planner.py::test_empty_task_title_is_rejected PASSED                [100%]
+
+============================== 4 passed in 0.05s ===============================

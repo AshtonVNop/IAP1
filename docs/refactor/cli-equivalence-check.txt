@@ -1,0 +1,15 @@
+[SAME] two tasks, reverse order         exit=0 stdout=358 bytes
+[SAME] quit immediately                 exit=0 stdout=121 bytes
+[SAME] uppercase Q quits                exit=0 stdout=121 bytes
+[SAME] quit with spaces                 exit=0 stdout=121 bytes
+[SAME] bad date text                    exit=0 stdout=264 bytes
+[SAME] empty title                      exit=0 stdout=227 bytes
+[SAME] empty title + bad date           exit=0 stdout=256 bytes
+[SAME] title padded with spaces         exit=0 stdout=235 bytes
+[SAME] equal deadlines keep order       exit=0 stdout=331 bytes
+[SAME] mixed valid and invalid          exit=0 stdout=489 bytes
+[SAME] title 'quit' is a task           exit=0 stdout=229 bytes
+[SAME] EOF without quit (crash path)    exit=1 stdout=188 bytes  err='EOFError: EOF when reading a line'
+[SAME] EOF mid-task (crash path)        exit=1 stdout=142 bytes  err='EOFError: EOF when reading a line'
+
+13/13 scenarios byte-identical (stdout, exit code, final stderr line)

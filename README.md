@@ -39,6 +39,14 @@ python app.py
 
 Enter due dates using `YYYY-MM-DD HH:MM`. Enter `q` when you are finished adding objectives.
 
+## Run the planner as a website
+
+```bash
+python web.py
+```
+
+This starts a local web server at http://127.0.0.1:8000 and opens it in your browser (use `--port 8080` to change the port, or `--no-browser` to skip opening a tab). It uses only the Python standard library. The website adds tasks through the same `Planner` and `submit_task` code as the CLI, so validation and error messages are identical. Tasks are kept in memory while the server runs (see ADR-001). Press Ctrl+C to stop.
+
 ## Run tests
 
 ```bash
